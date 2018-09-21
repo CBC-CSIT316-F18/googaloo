@@ -1,5 +1,7 @@
 <?php
 
+include "src/menuBar/menuBar.php";
+
 function printheader()
 {
     print("<html>");
@@ -8,10 +10,10 @@ function printheader()
         <title>TODO supply a title</title>
         <meta charset=\"UTF-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
-    print("<link rel=\"stylesheet\" type=\"text/css\" href=\"egstylesheet.css\">");
-    print("</head>"); 
+    print("<link rel=\"stylesheet\" type=\"text/css\" href=\"/styles/egstylesheet.css\">");
+    print("</head>");
     print("<body>");
-    print("<div id=\"idheader\"></div>");
+    printMenuBar("Menu Bars Are Cool!");
 }
 
 
