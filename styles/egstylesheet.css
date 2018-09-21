@@ -14,6 +14,7 @@ and open the template in the editor.
     height:10%;
     background: hsl(187, 99%, 85%);
     position: absolute;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
 }
 .mainMenu > div {
     position: absolute;
@@ -41,8 +42,28 @@ and open the template in the editor.
 .menuItem {
     flex-basis: auto;
     margin: auto;
+    color: black;
 }
 
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
 
 @keyframes App-logo-spin {
     0%   { transform: rotateY(0deg); }
