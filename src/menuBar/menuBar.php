@@ -13,11 +13,11 @@ function printMenuBar($menuTitle){
     // put in some dummy data
     $menuItems = [
         [
-            'href' => 'www.google.com',
+            'href' => 'https://www.google.com',
             'name' => 'Google',
         ],
         [
-            'href' => 'www.columbiabasin.edu',
+            'href' => 'https://www.columbiabasin.edu',
             'name' => 'CBC',
         ],
     ];
