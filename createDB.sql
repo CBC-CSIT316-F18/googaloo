@@ -4,6 +4,11 @@ USE charter;
 
 CREATE TABLE users (
 	id INT PRIMARY KEY AUTO_INCREMENT,
+	/*
+		type:
+		0 - user
+		1 - admin
+	*/
 	`type` INT,
 	username VARCHAR(30),
 	email VARCHAR(80),
