@@ -9,7 +9,7 @@ CREATE TABLE users (
 		0 - user
 		1 - admin
 	*/
-	`type` INT NOT NULL,
+	`type` INT NOT NULL DEFAULT 0,
 	username VARCHAR(30) NOT NULL,
 	email VARCHAR(80) NOT NULL,
 	pass VARBINARY(32) NOT NULL,
