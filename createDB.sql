@@ -9,13 +9,13 @@ CREATE TABLE users (
 		0 - user
 		1 - admin
 	*/
-	`type` INT,
-	username VARCHAR(30),
-	email VARCHAR(80),
-	pass VARBINARY(32),
-	first_name VARCHAR(20),
-	last_name VARCHAR(40),
-	date_expires DATE,
+	`type` INT NOT NULL,
+	username VARCHAR(30) NOT NULL,
+	email VARCHAR(80) NOT NULL,
+	pass VARBINARY(32) NOT NULL,
+	first_name VARCHAR(20) NOT NULL,
+	last_name VARCHAR(40) NOT NULL,
+	date_expires DATE DEFAULT NULL,
 	date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	date_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
