@@ -11,7 +11,7 @@ INSERT INTO `users` (
   `date_created`,
   `date_modified`
 ) VALUES (
-  'administrator',
+  1,
   'username',
   'user@email.com',
   0x70617373776f7264,
