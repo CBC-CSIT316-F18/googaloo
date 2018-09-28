@@ -13,7 +13,7 @@ function printheader()
     print("<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/egstylesheet.css\">");
     print("</head>");
     print("<body>");
-//    printMenuBar("Menu Bars Are Cool!");
+    printMenuBar("Menu Bars Are Cool!");
 }
 
 

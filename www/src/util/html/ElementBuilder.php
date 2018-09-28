@@ -75,6 +75,14 @@ class ElementBuilder
         return $this;
     }
 
+    /**
+     * @return $this ElementBuilder
+     */
+    public function printTextContent(){
+        print($this->textContent);
+        return $this;
+    }
+
     /********** Actions *************/
 
 
@@ -110,7 +118,7 @@ class ElementBuilder
     public function buildCloseOpenTag()
     {
         print("</$this->tagType>\r\n");
-        return self;
+        return $this;
     }
 
     /********** Printing *************/
@@ -123,7 +131,7 @@ class ElementBuilder
         }
     }
 
-    private function printTextContent(){
+    private function printTextContentNoReturn(){
         print($this->textContent);
     }
 
