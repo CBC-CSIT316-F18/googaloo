@@ -1,4 +1,4 @@
-CREATE DATABASE charter;
+CREATE DATABASE charter CHARSET utf8;
 
 USE charter;
 
