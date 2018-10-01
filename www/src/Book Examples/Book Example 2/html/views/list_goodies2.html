@@ -1,0 +1,46 @@
+<?php // This page is included by browse.php.
+// This page displays the available non-coffee products.
+// This page will make use of the query result $r.
+// The query returns an array of: description, image, sku, name, and stock.
+
+// Only display the header once:
+$header = false; 
+
+// Added later in Chapter 8:
+include('./includes/product_functions.inc.php');
+
+// Loop through the results:
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+	// If the header hasn't been shown, create it:
+	if (!$header) {
+		echo BOX_BEGIN; 
+
+		echo '<h2>' . $category . '</h2>
+		          	<div class="img-box">
+		             	<p><img alt="' . $category . '" src="/products/' . $row['g_image'] . '" />'. $row['g_description'] . '</p>
+		          </div>';
+
+		echo BOX_END;
+
+		echo '<p><br clear="all" /></p>';
+
+		echo BOX_BEGIN; 
+
+		// The header has now been shown:
+		$header = true;
+
+	} // End of $header IF.
+
+	// Show each product:
+	echo '<h3>' . $row['name'] . '</h3>
+		<div class="img-box"><p><img alt="' . $row['name'] . '" src="/products/' . $row['image']  . '" />' . $row['description'] . '<br />
+		<strong>Price:</strong> ' . $row['price'] . '<br />		
+		<strong>Availability:</strong> ' . get_stock_status($row['stock']) . '</p>
+		<p><a href="/cart.php?sku=' . $row['sku'] . '&action=add" class="button">Add to Cart</a></p></div>';
+  	
+} // End of WHILE loop. 
+
+echo '<p> <br clear="all" /></p>';
+
+echo BOX_END;
