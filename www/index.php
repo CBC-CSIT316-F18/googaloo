@@ -18,7 +18,7 @@ for($i = 0; $i < $ilength; $i++)
     $row=$rows[$i];
    for($j = 0; $j < $jlength; $j++) 
     {    
-        echo $row['ID'];
+        echo $row['id'];
          echo $row['first_name'];
           echo $row['last_name'];
            echo $row['email'];
