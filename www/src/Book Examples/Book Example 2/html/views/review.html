@@ -1,0 +1,48 @@
+<?php 
+
+// This page is included by browse.php.
+// This page displays a form for reviewing an item.
+// This page also displays existing reviews.
+
+echo BOX_BEGIN; 
+
+if (isset($message)) echo "<p>$message</p>";
+
+echo '<h2>Add a Review</h2><p>All fields are required, but your name and email address will never be shown.</p><form action="/browse/' . $type . '/' . urlencode($category) . '/' . $sp_cat . '" method="post">';
+
+echo '<div class="field"><label for="name"><strong>Name</strong></label><br />';
+
+include('./includes/form_functions.inc.php');
+create_form_input('name', 'text', $review_errors); 
+
+echo '</div>
+<div class="field"><label for="email"><strong>Email</strong></label><br />';
+
+create_form_input('email', 'text', $review_errors); 
+
+echo '</div>
+<div class="field"><label for="review"><strong>Review</strong></label><br />';
+
+create_form_input('review', 'textarea', $review_errors); 
+
+echo '</div><input type="submit" value="Submit" class="button" /></form>';
+
+echo BOX_END;
+
+// Show reviews...
+echo BOX_BEGIN; 
+
+echo '<h2>Reviews</h2>';
+
+if (mysqli_num_rows($r) > 0) {
+	
+	// Loop through the results:
+	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+		echo '<p>' . htmlspecialchars($row['review']) . '</p><hr />';
+	} // End of WHILE loop. 
+
+} else {
+	echo '<p>There are currently no reviews for this product.</p>';
+}
+
+echo BOX_END;
