@@ -1,0 +1,13 @@
+{
+	"repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.zendframework.com/"
+    }
+],
+
+	"require": 
+	{
+		"zendframework/zend-mail": "2.0.*"
+	}
+}
