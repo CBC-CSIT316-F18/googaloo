@@ -76,7 +76,7 @@ class ElementBuilder
     }
 
     /**
-     * @return $this ElementBuilder
+     * @return ElementBuilder
      */
     public function printTextContent(){
         print($this->textContent);
@@ -124,6 +124,9 @@ class ElementBuilder
     /********** Printing *************/
 
 
+    /**
+     * Prints the attributes
+     */
     private function printAttributes(){
         print(" ");
         foreach($this->attributes as $attribute){
@@ -131,6 +134,9 @@ class ElementBuilder
         }
     }
 
+    /**
+     * prints the textcontent.
+     */
     private function printTextContentNoReturn(){
         print($this->textContent);
     }
