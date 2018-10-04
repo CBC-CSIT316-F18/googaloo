@@ -8,7 +8,11 @@ and open the template in the editor.
     Author     : cs559
 */
 
-.mainMenu {
+body {
+    margin: 0px !important;
+}
+
+#topPanel {
     top: 0%;
     width:100%;
     height:10%;
@@ -16,7 +20,7 @@ and open the template in the editor.
     position: absolute;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
 }
-.mainMenu > div {
+#topPanel > div {
     position: absolute;
 }
 
@@ -73,7 +77,7 @@ a:active {
     /*100% { transform: rotateX(360deg); }*/
 /*}*/
 
-.App {
+#centerPanel {
     position: absolute;
     height: 90%;
     top: 10%;

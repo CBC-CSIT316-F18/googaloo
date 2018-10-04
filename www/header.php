@@ -16,7 +16,29 @@ function printheader()
     printMenuBar("Menu Bars Are Cool!");
 }
 
+function printleftpanel()
+{
+    print("<div id=\"leftpanel\">");
+    
+    print("</div>");
+    
+}
 
+
+function printcenterpanel()
+{
+    print("<div id=\"centerpanel\">");
+    
+    print("</div>");
+}
+
+
+function printrightpanel()
+{
+    print("<div id=\"rightpanel\">");
+    
+    print("</div>");
+}
 
 function printfooter()
 {

@@ -6,12 +6,13 @@
  * Time: 9:53 PM
  */
 use src\util\html\ElementBuilder\ElementBuilder;
-function printBody()
+function printcenterpanel()
 {
 
     /*  Fluent interfaces and builder classes for the win!  */
-    /*  @var ElementBuilder */
+    /**  @var ElementBuilder $ourBodyBuilder */
     $ourBodyBuilder = ElementBuilder::create("div")
+        ->withAttribute("id", "centerpanel")
         ->withAttribute("class", "app")
         ->withTextContent("This is a test of the builder!!!")
         /* Oonly start the tag, leave it open for children to be added to it  */
@@ -19,7 +20,6 @@ function printBody()
         ->printTextContent();
 
     /*  No need to save this to a variable as it is only used here once.  */
-    /*  @var ElementBuilder */
     ElementBuilder::create("div")
         ->withAttribute("class", "appChild")
         ->withTextContent("More Text Here")
@@ -27,7 +27,7 @@ function printBody()
         ->printTextContent()
         ->buildCloseOpenTag();
 
-
+        /** @var db_Tools $db */
         $db=new db_tools;
         $db->db_connect();
         $sql = "SELECT * FROM `users`";
