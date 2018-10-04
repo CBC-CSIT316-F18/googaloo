@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7e6fc58-eae2-4c3e-a3d7-b9bfe2999706" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/menuBar/menuBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/menuBar/menuBar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/pages/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/rightPanel/rightPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/rightPanel/rightPanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/styles/egstylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/styles/egstylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +14,7 @@
     <session id="1861834529">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -36,13 +33,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="385" />
+          <entry key="css" value="404" />
           <entry key="php" value="1531" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="385" />
+          <entry key="CSS" value="404" />
           <entry key="HTML" value="12" />
           <entry key="PHP" value="1519" />
         </counts>
@@ -72,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/styles/egstylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="94">
+              <caret line="104" column="13" lean-forward="true" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -117,6 +114,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="e0357c00-6eb0-4296-90e1-72bd12fd9464" name="localhost" />
@@ -282,16 +280,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538624495054</updated>
-      <workItem from="1538624497807" duration="8800000" />
+      <workItem from="1538624497807" duration="9503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8800000" />
+    <option name="totallyTimeSpent" value="9503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1926" y="-2166" width="1933" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25013334" />
@@ -455,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/styles/egstylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="94">
+          <caret line="104" column="13" lean-forward="true" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
         </state>
       </provider>
     </entry>
