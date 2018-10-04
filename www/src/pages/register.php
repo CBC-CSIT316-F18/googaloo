@@ -28,5 +28,5 @@ $register->setupRegistration();
 
 $ourBodyBuilder->buildCloseOpenTag();
 
-printrightpanel();
+printRightPanel();
 printfooter();

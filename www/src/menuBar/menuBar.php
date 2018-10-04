@@ -5,7 +5,7 @@
  * Date: 9/19/2018
  * Time: 11:10 PM
  */
-
+use src\util\html\ElementBuilder\ElementBuilder;
 /**
  * @param $menuTitle string
  */
@@ -32,6 +32,11 @@ function printMenuBar($menuTitle){
 
     /*  start the menu bar  */
     print('<div class="mainMenu" id="topPanel">');
+
+    ElementBuilder::create("div")
+        ->withAttribute("class", "menuLogout")
+        ->withTextContent("Logout")
+        ->buildCompleteTagWithTextContent();
 
     print('<div class="menuTitle">'.$menuTitle.'</div>');
 
