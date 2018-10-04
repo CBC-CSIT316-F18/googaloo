@@ -20,6 +20,14 @@ function printMenuBar($menuTitle){
             'href' => 'https://www.columbiabasin.edu',
             'name' => 'CBC',
         ],
+        [
+            'href' => '/googaloo/www/src/pages/register.php',
+            'name' => 'Register',
+        ],
+        [
+            'href' => '/googaloo/www/index.php',
+            'name' => 'Home',
+        ],
     ];
 
     /*  start the menu bar  */

@@ -3,7 +3,7 @@
 
 function printrightpanel()
 {
-    print("<div id=\"rightpanel\">");
-    
+    print("<div id=\"rightPanel\">");
+
     print("</div>");
 }

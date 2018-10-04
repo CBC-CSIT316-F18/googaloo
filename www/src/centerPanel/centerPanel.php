@@ -6,6 +6,8 @@
  * Time: 9:53 PM
  */
 use src\util\html\ElementBuilder\ElementBuilder;
+use src\util\database\db_tools\db_tools;
+
 function printcenterpanel()
 {
 
@@ -15,7 +17,7 @@ function printcenterpanel()
         ->withAttribute("id", "centerpanel")
         ->withAttribute("class", "app")
         ->withTextContent("This is a test of the builder!!!")
-        /* Oonly start the tag, leave it open for children to be added to it  */
+        /* Only start the tag, leave it open for children to be added to it  */
         ->buildLeaveTagOpen()
         ->printTextContent();
 
@@ -27,7 +29,7 @@ function printcenterpanel()
         ->printTextContent()
         ->buildCloseOpenTag();
 
-        /** @var db_Tools $db */
+        /** @var db_tools $db */
         $db=new db_tools;
         $db->db_connect();
         $sql = "SELECT * FROM `users`";

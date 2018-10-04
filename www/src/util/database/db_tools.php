@@ -1,4 +1,5 @@
 <?php
+namespace src\util\database\db_tools;
 function escape_data ($data, $dbc) { 
 
 	// Strip the slashes if Magic Quotes is on:
@@ -14,6 +15,10 @@ class db_tools
     public $username="root";
     public $password="";
     public $dbname="charter";
+
+    /**
+     * @return \mysqli|null|string
+     */
     function db_connect()
     {   
         // Define connection as a static variable, to avoid connecting more than once 
@@ -32,7 +37,11 @@ class db_tools
         }
         return $this->connection;
     }
-   
+
+    /**
+     * @param $query
+     * @return bool|\mysqli_result
+     */
     function db_query($query) 
     {
         // Connect to the database
@@ -41,7 +50,11 @@ class db_tools
         $result = mysqli_query($this->connection,$query);
         return $result;
     }
-   
+
+    /**
+     * @param string $query
+     * @return array|bool
+     */
     function db_select($query) 
     {
         $rows = array();
@@ -57,13 +70,20 @@ class db_tools
         }
         return $rows;
     }
-   
+
+    /**
+     * @return string
+     */
     function db_error() 
     {
         $this->db_connect();
         return mysqli_error($this->connection);
     }
-   
+
+    /**
+     * @param string $value
+     * @return string
+     */
     function db_quote($value) 
     {
         $this->db_connect();
