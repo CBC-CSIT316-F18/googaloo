@@ -15,7 +15,7 @@ use src\util\html\ElementBuilder\ElementBuilder;
 $register = new Register();
 
 printheader();
-printleftpanel();
+printLeftPanel();
 
 /**  @var ElementBuilder $ourBodyBuilder */
 $ourBodyBuilder = ElementBuilder::create("div")

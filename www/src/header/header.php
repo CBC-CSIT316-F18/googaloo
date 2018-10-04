@@ -11,5 +11,5 @@ function printheader()
     print("<link rel=\"stylesheet\" type=\"text/css\" href=\"/googaloo/www/styles/egstylesheet.css\">");
     print("</head>");
     print("<body>");
-    printMenuBar("Menu Bars Are Cool!");
+    printMenuBar("Menu Bar. (Nevermind the colors, they are there just to show the bounding boxes)");
 }

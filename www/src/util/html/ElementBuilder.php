@@ -85,6 +85,19 @@ class ElementBuilder
 
     /********** Actions *************/
 
+    /**
+     * Builds the complete element with closing tag and text content
+     * @return ElementBuilder
+     */
+    public function buildCompleteTagWithTextContent()
+    {
+        print("<$this->tagType ");
+        $this->printAttributes();
+        print(" >\r\n");
+        $this->printTextContent();
+        print("</$this->tagType>\r\n");
+        return $this;
+    }
 
     /**
      * Builds the complete element with closing tag

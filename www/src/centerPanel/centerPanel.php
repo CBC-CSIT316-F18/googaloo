@@ -8,7 +8,7 @@
 use src\util\html\ElementBuilder\ElementBuilder;
 use src\util\database\db_tools\db_tools;
 
-function printcenterpanel()
+function printCenterPanel()
 {
 
     /*  Fluent interfaces and builder classes for the win!  */
@@ -34,14 +34,14 @@ function printcenterpanel()
         $db->db_connect();
         $sql = "SELECT * FROM `users`";
         $rows=$db->db_select($sql);
-        
+
         $ilength = count($rows);
-        for($i = 0; $i < $ilength; $i++) 
+        for($i = 0; $i < $ilength; $i++)
         {
            $jlength = count($rows[$i]);
            $row=$rows[$i];
-          for($j = 0; $j < $jlength; $j++) 
-           {    
+          for($j = 0; $j < $jlength; $j++)
+           {
                echo $row['id'];
                 echo $row['first_name'];
                  echo $row['last_name'];

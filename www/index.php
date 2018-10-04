@@ -5,7 +5,7 @@ include "src/srcIndex.php";
 
 
 printheader();
-printleftpanel();
-printcenterpanel();
+printLeftPanel();
+printCenterPanel();
 printrightpanel();
 printfooter();
