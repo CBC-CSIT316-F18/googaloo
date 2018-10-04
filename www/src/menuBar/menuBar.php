@@ -23,7 +23,7 @@ function printMenuBar($menuTitle){
     ];
 
     /*  start the menu bar  */
-    print('<div class="mainMenu">');
+    print('<div class="mainMenu" id="topPanel">');
 
     print('<div class="menuTitle">'.$menuTitle.'</div>');
 

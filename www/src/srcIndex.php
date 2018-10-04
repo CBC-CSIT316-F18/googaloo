@@ -1,4 +1,6 @@
 <?php
+include 'util/database/db_tools.php';
+include 'util/html/forminput.php';
 include "menuBar/menuBar.php";
 include "header/header.php";
 include "leftPanel/leftPanel.php";
