@@ -27,6 +27,28 @@ function printBody()
         ->printTextContent()
         ->buildCloseOpenTag();
 
+
+        $db=new db_tools;
+        $db->db_connect();
+        $sql = "SELECT * FROM `users`";
+        $rows=$db->db_select($sql);
+        
+        $ilength = count($rows);
+        for($i = 0; $i < $ilength; $i++) 
+        {
+           $jlength = count($rows[$i]);
+           $row=$rows[$i];
+          for($j = 0; $j < $jlength; $j++) 
+           {    
+               echo $row['id'];
+                echo $row['first_name'];
+                 echo $row['last_name'];
+                  echo $row['email'];
+                   echo $row['username'];
+               echo "<br>";
+           }
+        }
+
     /*  Now close the tag since we have added the child we wanted to add  */
     $ourBodyBuilder->buildCloseOpenTag();
 }
