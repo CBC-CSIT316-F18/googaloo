@@ -105,7 +105,12 @@ a:active {
     top: 10%;
     left: 15%;
     width: 75%;
-    padding: 0 20px ;
+    overflow-y: auto;
+}
+
+.centerPanelSpacer {
+    width: auto;
+    margin: 0px 20px;
 }
 
 #rightPanel {
@@ -115,6 +120,7 @@ a:active {
     top: 10%;
     right: 0%;
     width: 10%;
+    overflow-y: auto;
 }
 
 .rightPanelItem {
@@ -123,7 +129,7 @@ a:active {
     margin: 10px auto;
     height: 3%;
     width: 90%;
-    font-size: .75em;
+    font-size: 1.35vmin;
     text-align: center;
     padding-top: 5%;
     cursor: pointer;
@@ -142,6 +148,7 @@ a:active {
     top: 10%;
     left: 0%;
     width: 15%;
+    overflow: auto;
 }
 
 .leftPanelItem {
@@ -150,7 +157,7 @@ a:active {
     margin: 25px auto;
     height: 5%;
     width: 75%;
-    font-size: 1.5em;
+    font-size: 3vmin;
     text-align: center;
     padding-top: 3%;
     cursor: pointer;

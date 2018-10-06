@@ -24,8 +24,15 @@ $ourBodyBuilder = ElementBuilder::create("div")
     /* Only start the tag, leave it open for children to be added to it  */
     ->buildLeaveTagOpen();
 
+    /** @var ElementBuilder $bodySpacer */
+$bodySpacer = ElementBuilder::create("div")
+    ->withAttribute("class", "centerPanelSpacer")
+    /* Only start the tag, leave it open for children to be added to it  */
+    ->buildLeaveTagOpen();
+
 $register->setupRegistration();
 
+$bodySpacer->buildCloseOpenTag();
 $ourBodyBuilder->buildCloseOpenTag();
 
 printRightPanel();

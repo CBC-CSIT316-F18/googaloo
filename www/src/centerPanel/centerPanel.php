@@ -16,9 +16,14 @@ function printCenterPanel()
     $ourBodyBuilder = ElementBuilder::create("div")
         ->withAttribute("id", "centerpanel")
         ->withAttribute("class", "app")
-        ->withTextContent("This is a test of the builder!!!")
+        /* Only start the tag, leave it open for children to be added to it  */
+        ->buildLeaveTagOpen();
+
+    $bodySpacer = ElementBuilder::create("div")
+        ->withAttribute("class", "centerPanelSpacer")
         /* Only start the tag, leave it open for children to be added to it  */
         ->buildLeaveTagOpen()
+        ->withTextContent("This is a test of the builder!!!")
         ->printTextContent();
 
     /*  No need to save this to a variable as it is only used here once.  */
@@ -52,5 +57,6 @@ function printCenterPanel()
         }
 
     /*  Now close the tag since we have added the child we wanted to add  */
+    $bodySpacer->buildCloseOpenTag();
     $ourBodyBuilder->buildCloseOpenTag();
 }
