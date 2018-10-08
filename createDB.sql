@@ -12,7 +12,7 @@ CREATE TABLE users (
 	`type` INT NOT NULL DEFAULT 0,
 	username VARCHAR(30) NOT NULL,
 	email VARCHAR(80) NOT NULL,
-	pass VARBINARY(32) NOT NULL,
+	pass VARCHAR(255) NOT NULL,
 	first_name VARCHAR(20) NOT NULL,
 	last_name VARCHAR(40) NOT NULL,
 	date_expires DATE DEFAULT NULL,
