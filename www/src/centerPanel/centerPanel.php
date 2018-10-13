@@ -5,6 +5,7 @@
  * Date: 9/27/2018
  * Time: 9:53 PM
  */
+
 use src\util\html\ElementBuilder\ElementBuilder;
 use src\util\database\db_tools\db_tools;
 
@@ -34,27 +35,41 @@ function printCenterPanel()
         ->printTextContent()
         ->buildCloseOpenTag();
 
-        /** @var db_tools $db */
-        $db=new db_tools;
-        $db->db_connect();
-        $sql = "SELECT * FROM `users`";
-        $rows=$db->db_select($sql);
+    /** @var db_tools $db */
+    $db = new db_tools;
+    $db->db_connect();
+    $sql = "SELECT * FROM `users`";
+    $rows = $db->db_select($sql);
 
-        $ilength = count($rows);
-        for($i = 0; $i < $ilength; $i++)
-        {
-           $jlength = count($rows[$i]);
-           $row=$rows[$i];
-          for($j = 0; $j < $jlength; $j++)
-           {
-               echo $row['id'];
-                echo $row['first_name'];
-                 echo $row['last_name'];
-                  echo $row['email'];
-                   echo $row['username'];
-               echo "<br>";
-           }
+    $userTable = ElementBuilder::create("table")
+        /* Only start the tag, leave it open for children to be added to it  */
+        ->buildLeaveTagOpen();
+
+    /*  Table header  */
+    print("<tr>");
+    foreach ($rows as $row) {
+        foreach ($row as $column => $field) {
+            print( "<th>");
+            print( "$column");
+            print( "</th>");
         }
+        print( "</tr>");
+        break;
+    }
+
+    /*  Table contents  */
+    foreach ($rows as $row) {
+        print( "<tr>");
+        foreach ($row as $field) {
+            print("<td>");
+            print( $field);
+            print( "</td>");
+        }
+        print( "</tr>");
+    }
+
+    /*  Close the table  */
+    $userTable->buildCloseOpenTag();
 
     /*  Now close the tag since we have added the child we wanted to add  */
     $bodySpacer->buildCloseOpenTag();

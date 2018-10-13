@@ -2,7 +2,10 @@
 
 namespace src\util\database\register;
 
+use src\util\database\InsertQueryBuilder\InsertQueryBuilder;
 use src\util\html\FormInput\FormInput;
+use src\util\database\db_tools\db_tools;
+
 // This is the registration page for the site.
 // This file both displays and processes the registration form.
 // This script is begun in Chapter 4.
@@ -24,8 +27,24 @@ class Register
     /** @var array $reg_errors */
     public $reg_errors = array();
 
+    public $connection = null;
+    /** @var db_tools $dbTools */
+    public $dbTools = null;
+    /** @var string $email */
+    public $email = "";
+    /** @var string $userName */
+    public $userName = "";
+    /** @var string $firstName */
+    public $firstName = "";
+    /** @var string $lastName */
+    public $lastName = "";
+    /** @var string $password */
+    public $password = "";
+
     public function setupRegistration()
     {
+        $this->dbTools = new db_tools();
+        $this->connection = $this->dbTools->db_connect();
         // Check for a form submission:
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->post();
@@ -49,9 +68,9 @@ class Register
 
         // Make sure the email address and username are available:
         /** @var string $q */
-        $q = "SELECT email, username FROM users WHERE email='$e' OR username='$u'";
+        $q = "SELECT email, username FROM users WHERE email='$this->email' OR username='$this->userName'";
         /** @var mysqli_result|bool $r */
-        $r = mysqli_query($dbc, $q);
+        $r = mysqli_query($this->connection, $q);
 
         // Get the number of rows returned:
         /** @var int $rows */
@@ -65,6 +84,7 @@ class Register
             } else { // One or both may be taken.
                 $this->handleResponseSomethingTaken($r);
             } // End of $rows === 2 ELSE.
+            $this->alwaysAndForever();
         }
     }
 
@@ -104,22 +124,48 @@ class Register
 
         // New query, updated in Chapter 6 for PayPal integration:
         // Sets expiration to yesterday:
-        $q = "INSERT INTO users (username, email, pass, first_name, last_name, date_expires) VALUES ('$u', '$e', '" . password_hash($p, PASSWORD_BCRYPT) . "', '$fn', '$ln', SUBDATE(NOW(), INTERVAL 1 DAY) )";
+//        $q = "INSERT INTO users (username, email, pass, first_name, last_name, date_expires) VALUES ('$u', '$e', '" . password_hash($p, PASSWORD_BCRYPT) . "', '$fn', '$ln', SUBDATE(NOW(), INTERVAL 1 DAY) )";
 
-        $r = mysqli_query($dbc, $q);
+        $q = (new InsertQueryBuilder())
+            ->intoTable("users")
+            ->withField("type", "0")
+            ->withField("username", $this->userName)
+            ->withField("email", $this->email)
+            ->withField("pass", md5($this->password))
+            ->withField("first_name", $this->firstName)
+            ->withField("last_name", $this->lastName)
+            ->withSpecialField("date_expires", "NULL")
+            ->withSpecialField("date_created", "CURRENT_TIMESTAMP")
+            ->withSpecialField("date_modified", "CURRENT_TIMESTAMP")
+            ->build();
 
-        if (mysqli_affected_rows($dbc) === 1) { // If it ran OK.
+        /*
+         *
+         * `type`,
+          `username`,
+          `email`,
+          `pass`,
+          `first_name`,
+          `last_name`,
+          `date_expires`,
+          `date_created`,
+          `date_modified`
+         */
+
+        $r = mysqli_query($this->connection, $q);
+
+        if (mysqli_affected_rows($this->connection) === 1) { // If it ran OK.
 
             // Get the user ID:
             // Store the new user ID in the session:
             // Added in Chapter 6:
-            $uid = mysqli_insert_id($dbc);
-				$_SESSION['reg_user_id']  = $uid;
+            $uid = mysqli_insert_id($this->connection);
+            $_SESSION['reg_user_id'] = $uid;
 
             // Display a thanks message...
 
 //             Original message from Chapter 4:
-             echo '<div class="alert alert-success"><h3>Thanks!</h3><p>Thank you for registering! You may now log in and access the site\'s content.</p></div>';
+            echo '<div class="alert alert-success"><h3>Thanks!</h3><p>Thank you for registering! You may now log in and access the site\'s content.</p></div>';
 
 //            // Updated message in Chapter 6:
 //            echo '<div class="alert alert-success"><h3>Thanks!</h3><p>Thank you for registering! To complete the process, please now click the button below so that you may pay for your site access via PayPal. The cost is $10 (US) per year. <strong>Note: When you complete your payment at PayPal, please click the button to return to this site.</strong></p></div>';
@@ -136,7 +182,7 @@ class Register
 
             // Send a separate email?
             $body = "Thank you for registering at <whatever site>. Blah. Blah. Blah.\n\n";
-            mail($_POST['email'], 'Registration Confirmation', $body, 'From: admin@example.com');
+//            mail($_POST['email'], 'Registration Confirmation', $body, 'From: admin@example.com');
 
             // Finish the page:
 //            include('./includes/footer.html'); // Include the HTML footer.
@@ -152,28 +198,28 @@ class Register
     {
         // Check for a first name:
         if (preg_match('/^[A-Z \'.-]{2,45}$/i', $_POST['first_name'])) {
-            $fn = escape_data($_POST['first_name'], $dbc);
+            $this->firstName = $this->dbTools->escape_data($_POST['first_name']);
         } else {
             $this->reg_errors['first_name'] = 'Please enter your first name!';
         }
 
         // Check for a last name:
         if (preg_match('/^[A-Z \'.-]{2,45}$/i', $_POST['last_name'])) {
-            $ln = escape_data($_POST['last_name'], $dbc);
+            $this->lastName = $this->dbTools->escape_data($_POST['last_name']);
         } else {
             $this->reg_errors['last_name'] = 'Please enter your last name!';
         }
 
         // Check for a username:
         if (preg_match('/^[A-Z0-9]{2,45}$/i', $_POST['username'])) {
-            $u = escape_data($_POST['username'], $dbc);
+            $this->userName = $this->dbTools->escape_data($_POST['username']);
         } else {
             $this->reg_errors['username'] = 'Please enter a desired name using only letters and numbers!';
         }
 
         // Check for an email address:
         if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === $_POST['email']) {
-            $e = escape_data($_POST['email'], $dbc);
+            $this->email = $this->dbTools->escape_data($_POST['email']);
         } else {
             $this->reg_errors['email'] = 'Please enter a valid email address!';
         }
@@ -181,7 +227,7 @@ class Register
         // Check for a password and match against the confirmed password:
         if (preg_match('/^(\w*(?=\w*\d)(?=\w*[a-z])(?=\w*[A-Z])\w*){6,}$/', $_POST['pass1'])) {
             if ($_POST['pass1'] === $_POST['pass2']) {
-                $p = $_POST['pass1'];
+                $this->password = $_POST['pass1'];
             } else {
                 $this->reg_errors['pass2'] = 'Your password did not match the confirmed password!';
             }
@@ -203,14 +249,38 @@ class Register
 EOD
         );
 
-        new FormInput('first_name', 'text', 'First Name', $this->reg_errors);
-        new FormInput('last_name', 'text', 'Last Name', $this->reg_errors);
-        new FormInput('username', 'text', 'Desired Username', $this->reg_errors);
+        if (isset($this->reg_errors['first_name'])) {
+            print("<div style='color: red'>{$this->reg_errors['first_name']}</div>");
+        }
+        new FormInput('first_name', 'text', 'First Name', ['placeholder' => 'first name']);
+
+        if (isset($this->reg_errors['last_name'])) {
+            print("<div style='color: red'>{$this->reg_errors['last_name']}</div>");
+        }
+        new FormInput('last_name', 'text', 'Last Name', ['placeholder' => 'last name']);
+
+        if (isset($this->reg_errors['username'])) {
+            print("<div style='color: red'>{$this->reg_errors['username']}</div>");
+        }
+        new FormInput('username', 'text', 'Desired Username', ['placeholder' => 'username']);
+
         echo '<span class="help-block">Only letters and numbers are allowed.</span>';
-        new FormInput('email', 'email', 'Email Address', $this->reg_errors);
-        new FormInput('pass1', 'password', 'Password', $this->reg_errors);
+        if (isset($this->reg_errors['email'])) {
+            print("<div style='color: red'>{$this->reg_errors['email']}</div>");
+        }
+        new FormInput('email', 'email', 'Email Address', ['placeholder' => 'email']);
+
+        if (isset($this->reg_errors['pass1'])) {
+            print("<div style='color: red'>{$this->reg_errors['pass1']}</div>");
+        }
+        new FormInput('pass1', 'password', 'Password', ['placeholder' => 'password']);
+
         echo '<span class="help-block">Must be at least 6 characters long, with at least one lowercase letter, one uppercase letter, and one number.</span>';
-        new FormInput('pass2', 'password', 'Confirm Password', $this->reg_errors);
+        if (isset($this->reg_errors['pass2'])) {
+            print("<div style='color: red'>{$this->reg_errors['pass2']}</div>");
+
+        }
+        new FormInput('pass2', 'password', 'Confirm Password', ['placeholder' => 'password']);
 
         print(
         <<<EOD
