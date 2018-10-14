@@ -9,7 +9,6 @@
 namespace src\authentication;
 
 use src\util\database\SelectQueryBuilder\SelectQueryBuilder;
-use src\util\html\ElementBuilder\ElementBuilder;
 use src\util\database\db_tools\db_tools;
 
 
@@ -25,7 +24,9 @@ class Login
     public function __construct()
     {
         if (!isset($_SESSION['userID'])) {
-            if($_SERVER['REQUEST_METHOD'] === "POST") {
+            if ($_SERVER['REQUEST_METHOD'] === "POST"
+                && isset($_POST['loginForm'])
+                && $_POST['loginForm'] === 'true') {
                 $this->checkLogin();
             }
             if (!isset($_SESSION['userID'])) {
@@ -62,7 +63,8 @@ class Login
 
                 </div>
                    <br>
-                <input type="submit" class="">Login</input>
+                   <input hidden="true" value="true" name="loginForm">
+                <input type="submit" >
 
             </form>
         </div>
@@ -81,6 +83,7 @@ FORMOUTPUT
         $this->dbTools = new db_tools();
         $dbc = $this->dbTools->db_connect();
 
+//        if(!isset($_POST['password']) || !isset($_POST['emailOrUsername']))
 
         $this->password = md5($this->password = $_POST['password']);
         $this->emailOrUsername = $this->dbTools->escape_data($_POST['emailOrUsername']);

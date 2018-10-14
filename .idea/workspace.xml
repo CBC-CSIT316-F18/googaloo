@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7e6fc58-eae2-4c3e-a3d7-b9bfe2999706" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/createUser.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createUser.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/header/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/authentication/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/authentication/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/src/menuBar/menuBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/menuBar/menuBar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/pages/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/src/srcIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/srcIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/util/database/InsertQueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/util/database/InsertQueryBuilder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,28 +29,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="php" value="86" />
+          <entry key="php" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="PHP" value="86" />
+          <entry key="PHP" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="584" />
           <entry key="dummy" value="2" />
-          <entry key="php" value="4933" />
+          <entry key="php" value="5399" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="584" />
-          <entry key="HTML" value="18" />
-          <entry key="PHP" value="4915" />
+          <entry key="HTML" value="20" />
+          <entry key="PHP" value="5379" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -67,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/util/database/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="247" column="42" lean-forward="true" selection-start-line="247" selection-start-column="28" selection-end-line="247" selection-end-column="42" />
+            <state relative-caret-position="197">
+              <caret line="247" column="12" selection-start-line="247" selection-start-column="6" selection-end-line="247" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -93,8 +92,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/srcIndex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/pages/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+              <folding>
+                <element signature="e#254#294#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/authentication/Logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -102,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/util/database/db_tools.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -111,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/authentication/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+            <state relative-caret-position="391">
+              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
               <folding>
                 <element signature="e#130#190#0#PHP" expanded="true" />
               </folding>
@@ -124,37 +144,25 @@
         <entry file="file://$PROJECT_DIR$/www/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#6#24#0#PHP" expanded="true" />
-              </folding>
+              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/src/util/database/SelectQueryBuilder.php">
+        <entry file="file://$PROJECT_DIR$/www/src/menuBar/menuBar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+            <state relative-caret-position="391">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/src/Book Examples/Book Example 1/html/includes/login.inc.php">
+        <entry file="file://$PROJECT_DIR$/www/src/util/html/ElementBuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="60" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/styles/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            <state relative-caret-position="-126">
+              <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -192,16 +200,17 @@
         <option value="$PROJECT_DIR$/www/src/util/database/db_tools.php" />
         <option value="$PROJECT_DIR$/www/src/centerPanel/centerPanel.php" />
         <option value="$PROJECT_DIR$/www/src/util/html/forminput.php" />
-        <option value="$PROJECT_DIR$/www/src/util/database/register.php" />
-        <option value="$PROJECT_DIR$/www/src/menuBar/menuBar.php" />
         <option value="$PROJECT_DIR$/www/src/header/header.php" />
         <option value="$PROJECT_DIR$/www/src/pages/register.php" />
         <option value="$PROJECT_DIR$/www/styles/login.css" />
         <option value="$PROJECT_DIR$/www/src/util/database/InsertQueryBuilder.php" />
-        <option value="$PROJECT_DIR$/www/src/srcIndex.php" />
-        <option value="$PROJECT_DIR$/www/index.php" />
-        <option value="$PROJECT_DIR$/www/src/authentication/Login.php" />
         <option value="$PROJECT_DIR$/www/src/util/database/SelectQueryBuilder.php" />
+        <option value="$PROJECT_DIR$/www/index.php" />
+        <option value="$PROJECT_DIR$/www/src/srcIndex.php" />
+        <option value="$PROJECT_DIR$/www/src/authentication/Logout.php" />
+        <option value="$PROJECT_DIR$/www/src/authentication/Login.php" />
+        <option value="$PROJECT_DIR$/www/src/util/database/register.php" />
+        <option value="$PROJECT_DIR$/www/src/menuBar/menuBar.php" />
       </list>
     </option>
   </component>
@@ -211,17 +220,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="e0357c00-6eb0-4296-90e1-72bd12fd9464" name="localhost" />
     </servers>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1848" />
-    <option name="y" value="40" />
-    <option name="width" value="1930" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1932" />
+    <option name="y" value="-2172" />
+    <option name="width" value="3866" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -315,6 +323,14 @@
               <item name="googaloo" type="b2602c69:ProjectViewProjectNode" />
               <item name="googaloo" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="googaloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="googaloo" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,6 +365,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\googaloo\www\src\authentication" />
       <recent name="C:\wamp64\www\googaloo\www\include" />
     </key>
   </component>
@@ -377,24 +394,24 @@
       <workItem from="1538624497807" duration="9503000" />
       <workItem from="1538809271938" duration="1597000" />
       <workItem from="1539068005437" duration="4262000" />
-      <workItem from="1539457024071" duration="16051000" />
+      <workItem from="1539457024071" duration="19887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31413000" />
+    <option name="totallyTimeSpent" value="35249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1926" y="-2166" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15671642" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32925472" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" visible="true" weight="0.34593993" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49866667" visible="true" weight="0.34593993" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -402,7 +419,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.34593993" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50133336" side_tool="true" visible="true" weight="0.34593993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -419,19 +436,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/www/src/srcIndex.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/www/src/authentication/Login.php</url>
-          <line>96</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/www/src/srcIndex.php</url>
-          <line>3</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/www/src/util/database/register.php</url>
+          <line>154</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -448,6 +455,13 @@
       </expression>
       <expression>
         <expression-string>select id, username, email, type, pass, IF(!isnull(date_expires) or date_expires &lt;= NOW(), true, false) AS expired from users where username = 'TheTyckoMan@gmail.com' or email = 'TheTyckoMan@gmail.com'</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>session_start();             setcookie(session_name(), '', 100);             session_unset();             session_destroy();             $_SESSION = [];</expression-string>
         <language-id>PHP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -552,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/util/html/ElementBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/util/html/forminput.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -608,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/menuBar/menuBar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/centerPanel/centerPanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -653,10 +653,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/util/database/InsertQueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/util/database/SelectQueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/util/html/ElementBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/util/database/db_tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/srcIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/authentication/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+          <folding>
+            <element signature="e#130#190#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/authentication/Logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/pages/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
             <element signature="e#254#294#0#PHP" expanded="true" />
           </folding>
@@ -665,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/util/database/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="247" column="42" lean-forward="true" selection-start-line="247" selection-start-column="28" selection-end-line="247" selection-end-column="42" />
+        <state relative-caret-position="197">
+          <caret line="247" column="12" selection-start-line="247" selection-start-column="6" selection-end-line="247" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -678,51 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.php">
+    <entry file="file://$PROJECT_DIR$/www/src/menuBar/menuBar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#6#24#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/util/database/db_tools.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/util/database/InsertQueryBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/srcIndex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/authentication/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
-          <folding>
-            <element signature="e#130#190#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/util/database/SelectQueryBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+        <state relative-caret-position="391">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>

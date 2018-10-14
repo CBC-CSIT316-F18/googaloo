@@ -29,8 +29,11 @@ function printMenuBar($menuTitle){
 
     ElementBuilder::create("div")
         ->withAttribute("class", "menuLogout")
+        ->withAttribute("onClick", "document.querySelector(\"form#IveSeenThingsYouWouldntBelieve\").submit();")
         ->withTextContent("Logout")
         ->buildCompleteTagWithTextContent();
+
+    print("<form action='/googaloo/www/index.php' id='IveSeenThingsYouWouldntBelieve' method='post' hidden='true'><input name='ThisSessionWillFadeLikeTearsInTheRain' value='AllThoseMomentsWillBeLostInTime' /></form>");
 
     print('<div class="menuTitle">'.$menuTitle.'</div>');
 

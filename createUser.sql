@@ -37,3 +37,27 @@ INSERT INTO `users` (
   'Stan',
   'Dard'
 )
+
+
+/*  login I can remember  */
+INSERT INTO users (
+  type, 
+  username, 
+  email, 
+  pass, 
+  first_name, 
+  last_name, 
+  date_expires, 
+  date_created, 
+  date_modified
+) VALUES (
+  '0', 
+  'TheTyckoMan', 
+  'TheTyckoMan@gmail.com',
+  '3e6c7d141e32189c917761138b026b74', 
+  'Tycko', 
+  'Franklin',
+  NULL, 
+  CURRENT_TIMESTAMP, 
+  CURRENT_TIMESTAMP
+) 
