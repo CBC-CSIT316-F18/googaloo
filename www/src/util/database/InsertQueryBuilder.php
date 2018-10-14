@@ -91,9 +91,7 @@ class InsertQueryBuilder
         }
         $query .= ") ";
 
-
         return $query;
-        // INSERT INTO `users` (`id`, `type`, `username`, `email`, `pass`, `first_name`, `last_name`, `date_expires`, `date_created`, `date_modified`) VALUES (NULL, '0', '', '', '', '', '', NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
     }
 
 }

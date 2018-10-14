@@ -13,14 +13,6 @@ function printMenuBar($menuTitle){
     // put in some dummy data
     $menuItems = [
         [
-            'href' => 'https://www.google.com',
-            'name' => 'Google',
-        ],
-        [
-            'href' => 'https://www.columbiabasin.edu',
-            'name' => 'CBC',
-        ],
-        [
             'href' => '/googaloo/www/src/pages/register.php',
             'name' => 'Register',
         ],
@@ -32,6 +24,8 @@ function printMenuBar($menuTitle){
 
     /*  start the menu bar  */
     print('<div class="mainMenu" id="topPanel">');
+
+    $login =
 
     ElementBuilder::create("div")
         ->withAttribute("class", "menuLogout")

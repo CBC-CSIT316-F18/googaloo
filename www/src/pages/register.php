@@ -15,6 +15,7 @@ use src\util\html\ElementBuilder\ElementBuilder;
 $register = new Register();
 
 printheader();
+printMenuBar("Menu Bar. (Nevermind the colors, they are there just to show the bounding boxes)");
 printLeftPanel();
 
 /**  @var ElementBuilder $ourBodyBuilder */
