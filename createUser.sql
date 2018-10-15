@@ -54,7 +54,7 @@ INSERT INTO users (
   '0', 
   'TheTyckoMan', 
   'TheTyckoMan@gmail.com',
-  '3e6c7d141e32189c917761138b026b74', 
+  '$2y$10$DbHKZE22h0PKWmqwz0emFOC2mdoLFPB53FPHnu.tRR5b6iGNVTNC.', 
   'Tycko', 
   'Franklin',
   NULL, 

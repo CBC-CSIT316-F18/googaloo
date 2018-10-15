@@ -6,7 +6,7 @@
  * Time: 8:21 PM
  */
 
-namespace src\authentication;
+namespace src\util\authentication;
 
 use src\util\database\SelectQueryBuilder\SelectQueryBuilder;
 use src\util\database\db_tools\db_tools;
@@ -85,7 +85,7 @@ FORMOUTPUT
 
 //        if(!isset($_POST['password']) || !isset($_POST['emailOrUsername']))
 
-        $this->password = md5($this->password = $_POST['password']);
+        $this->password = $_POST['password'];
         $this->emailOrUsername = $this->dbTools->escape_data($_POST['emailOrUsername']);
 
 
@@ -103,7 +103,7 @@ FORMOUTPUT
             $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
             // Validate the password:
-            if ($this->password === $row['pass']) { // Correct!
+            if (password_verify($this->password, $row['pass'])) { // Correct!
 
                 // If the user is an administrator, create a new session ID to be safe:
                 // This code is created at the end of Chapter 4:

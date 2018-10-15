@@ -12,8 +12,8 @@ include "util/database/SelectQueryBuilder.php";
 include 'util/html/forminput.php';
 include "util/html/ElementBuilder.php";
 include "util/database/register.php";
-include "authentication/Login.php";
-include "authentication/Logout.php";
+include "util/authentication/Login.php";
+include "util/authentication/Logout.php";
 
 /*  functions  */
 include "menuBar/menuBar.php";
@@ -25,6 +25,6 @@ include "footer/footer.php";
 
 
 /*  Logout check  */
-new src\authentication\Logout();
+new src\util\authentication\Logout();
 /*  Login check  */
-new src\authentication\Login();
+new src\util\authentication\Login();

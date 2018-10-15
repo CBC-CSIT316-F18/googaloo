@@ -131,7 +131,7 @@ class Register
             ->withField("type", "0")
             ->withField("username", $this->userName)
             ->withField("email", $this->email)
-            ->withField("pass", md5($this->password))
+            ->withField("pass", password_hash($this->password,PASSWORD_DEFAULT))
             ->withField("first_name", $this->firstName)
             ->withField("last_name", $this->lastName)
             ->withSpecialField("date_expires", "NULL")
