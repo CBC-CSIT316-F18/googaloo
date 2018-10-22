@@ -1,0 +1,34 @@
+.newRegisterContainer {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 50%;
+    width: 50%;
+    background-color: #94f7f1;
+}
+
+.formContainer {
+    position: absolute;    
+    width: 100%;
+    top: 17%;
+    height: 83%;
+}
+form {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    top: 17%;
+    height: 83%;
+}
+
+h1 {
+    position: absolute;
+    width: auto;
+    left: 38%;
+}
+
+a.login {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

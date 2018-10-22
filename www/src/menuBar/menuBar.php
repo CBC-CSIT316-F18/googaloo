@@ -13,10 +13,6 @@ function printMenuBar($menuTitle){
     // put in some dummy data
     $menuItems = [
         [
-            'href' => '/googaloo/www/src/pages/register.php',
-            'name' => 'Register',
-        ],
-        [
             'href' => '/googaloo/www/index.php',
             'name' => 'Home',
         ],

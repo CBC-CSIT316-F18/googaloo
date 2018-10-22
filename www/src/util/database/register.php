@@ -166,7 +166,8 @@ class Register
 
 //             Original message from Chapter 4:
             echo '<div class="alert alert-success"><h3>Thanks!</h3><p>Thank you for registering! You may now log in and access the site\'s content.</p></div>';
-
+            $loginHref = HREF_ROOT . "index.php";
+            print("<a href='$loginHref'>login page</a>");
 //            // Updated message in Chapter 6:
 //            echo '<div class="alert alert-success"><h3>Thanks!</h3><p>Thank you for registering! To complete the process, please now click the button below so that you may pay for your site access via PayPal. The cost is $10 (US) per year. <strong>Note: When you complete your payment at PayPal, please click the button to return to this site.</strong></p></div>';
 
@@ -241,9 +242,11 @@ class Register
 //require_once('./includes/form_functions.inc.php');
     function alwaysAndForever()
     {
+        $loginHref = HREF_ROOT . "index.php";
         print(
         <<<EOD
 <h1>Register</h1>
+<div class='formContainer'>
 <p>Access to the site's content is available to registered users at a cost of $10.00 (US) per year. Use the form below to begin the registration process. <strong>Note: All fields are required.</strong> After completing this form, you'll be presented with the opportunity to securely pay for your yearly subscription via <a href="http://www.paypal.com">PayPal</a>.</p>
 <form action="register.php" method="post" accept-charset="utf-8">
 EOD
@@ -284,8 +287,12 @@ EOD
 
         print(
         <<<EOD
-<input type="submit" name="submit_button" value="Next &rarr;" id="submit_button" class="btn btn-default" />
+<input type="submit" name="submit_button" value="Submit" id="submit_button" class="btn btn-default" />
 </form>
+
+<a class='login' href='$loginHref'>Return to Login Page</a>
+</div>
+
 <br>
 EOD
         );

@@ -1,5 +1,5 @@
 <?php
-
+define("HREF_ROOT", "/googaloo/www/");
 /*  Start session if session has not already been started  */
 if (!isset($_SESSION)) {
     session_start();
@@ -23,8 +23,9 @@ include "centerPanel/centerPanel.php";
 include "rightPanel/rightPanel.php";
 include "footer/footer.php";
 
-
-/*  Logout check  */
-new src\util\authentication\Logout();
-/*  Login check  */
-new src\util\authentication\Login();
+if(!isset($_SESSION['loginNotNeeded'])){
+    /*  Logout check  */
+    new src\util\authentication\Logout();
+    /*  Login check  */
+    new src\util\authentication\Login();
+}

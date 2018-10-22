@@ -38,28 +38,29 @@ class Login
     private function createLoginPageOnly()
     {
         printheader();
+        $registerHref = HREF_ROOT . "src/pages/register.php";
         print(<<<FORMOUTPUT
 <link rel="stylesheet" type="text/css" href="/googaloo/www/styles/login.css">
 <div class="container">
-    <h1 class="">Login Form</h1>
+    <h1 >Login Form</h1>
     <div class="login-form">
-        <div class="">
-            <div class="">
+        <div >
+            <div >
                 <h2>Login</h2>
                 <p>Please enter your email or username, and password</p>
             </div>
             <form id="Login" method="post" >
 
-                <div class="">
+                <div >
 
 
-                    <input type="text" class="" name="emailOrUsername" id="emailOrUsername" placeholder="Email or Username">
+                    <input type="text" name="emailOrUsername" id="emailOrUsername" placeholder="Email or Username">
 
                 </div>
                    <br>
-                <div class="form-group">
+                <div>
 
-                    <input type="password" class="" name="password" id="password" placeholder="Password">
+                    <input type="password"  name="password" id="password" placeholder="Password">
 
                 </div>
                    <br>
@@ -68,7 +69,8 @@ class Login
 
             </form>
         </div>
-        <p class="botto-text"> CBC k-12 Charter</p>
+        <p> CBC k-12 Charter</p>
+        <p> Not registered? Register <a href='$registerHref'>here</a></p>
     </div>
 </div>
 FORMOUTPUT
