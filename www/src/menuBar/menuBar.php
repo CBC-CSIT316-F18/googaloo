@@ -33,6 +33,11 @@ function printMenuBar($menuTitle){
 
     print('<div class="menuTitle">'.$menuTitle.'</div>');
 
+    ElementBuilder::create("div")
+        ->withAttribute("class", "menuUserInfo")
+        ->withTextContent("Welcome {$_SESSION['userFirstName']} {$_SESSION['userLastName']}")
+        ->buildCompleteTagWithTextContent();
+
     print('<div class="menuLinks">');
     /* fill the menu bar  */
     printMenuItem($menuItems);

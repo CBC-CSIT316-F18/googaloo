@@ -92,7 +92,7 @@ FORMOUTPUT
 
 
         $q = (new SelectQueryBuilder())
-            ->withFields("id, username, email, type, pass, IF(!isnull(date_expires) or date_expires <= NOW(), true, false) AS expired")
+            ->withFields("id, username, first_name, last_name, email, type, pass, IF(!isnull(date_expires) or date_expires <= NOW(), true, false) AS expired")
             ->fromTable("users")
             ->withWhere("username = '$this->emailOrUsername' or email = '$this->emailOrUsername'")
             ->build();
@@ -117,6 +117,8 @@ FORMOUTPUT
                 // Store the data in a session:
                 $_SESSION['userID'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['userFirstName'] = $row['first_name'];                
+                $_SESSION['userLastName'] = $row['last_name'];
 
                 // Only indicate if the user's account is not expired:
                 if ($row['expired'] === 0) {
