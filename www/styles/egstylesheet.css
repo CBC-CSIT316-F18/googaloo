@@ -3,22 +3,47 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Sep 18, 2018, 11:07:49 AM
     Author     : cs559
 */
 
-.mainMenu {
+body {
+    margin: 0px !important;
+}
+
+#topPanel {
+
     top: 0%;
-    width:100%;
-    height:10%;
-    background: hsl(187, 99%, 85%);
+    width: 100%;
+    height: 10%;
+    background: hsl(311, 100%, 96%);
     position: absolute;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    /*background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);*/
 }
-.mainMenu > div {
+
+#topPanel > div {
     position: absolute;
 }
+
+.menuLogout {
+    position: absolute;
+    border-radius: 30px;
+    right:5%;
+    top:10%;
+    width: 5%;
+    height: 22%;
+    background: hsl(9, 100%, 80%);
+    padding: 10px 0;
+    text-align: center;    box-shadow: inset 0 0 0 1px #27496d;
+    cursor: pointer;
+}
+
+.menuLogout:hover {
+    background: hsl(0, 100%, 63%);
+    box-shadow: inset 0 0 0 1px #27496d, 0 5px 15px #193047;
+}
+
 
 .menuTitle {
     top: 5%;
@@ -66,16 +91,81 @@ a:active {
 }
 
 /*@keyframes App-logo-spin {*/
-    /*0%   { transform: rotateY(0deg); }*/
-    /*25%   { transform: rotateY(0deg); }*/
-    /*50%  { transform: rotateY(360deg); }*/
-    /*75%  { transform: rotateX(0deg); }*/
-    /*100% { transform: rotateX(360deg); }*/
+/*0%   { transform: rotateY(0deg); }*/
+/*25%   { transform: rotateY(0deg); }*/
+/*50%  { transform: rotateY(360deg); }*/
+/*75%  { transform: rotateX(0deg); }*/
+/*100% { transform: rotateX(360deg); }*/
 /*}*/
 
-.App {
+#centerPanel {
+    background-color: #dad37a;
     position: absolute;
     height: 90%;
     top: 10%;
-    width: 100%;
+    left: 15%;
+    width: 75%;
+    overflow-y: auto;
 }
+
+.centerPanelSpacer {
+    width: auto;
+    margin: 0px 20px;
+}
+
+#rightPanel {
+    background-color: #daa5b1;
+    position: absolute;
+    height: 90%;
+    top: 10%;
+    right: 0%;
+    width: 10%;
+    overflow-y: auto;
+}
+
+.rightPanelItem {
+    background-color: #b5868e;
+    border-radius: 15px;
+    margin: 10px auto;
+    height: 3%;
+    width: 90%;
+    font-size: 1.35vmin;
+    text-align: center;
+    padding-top: 5%;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px #27496d;
+}
+
+.rightPanelItem:hover {
+    background-color: rgba(191, 142, 157, 0.71);
+    box-shadow: inset 0 0 0 1px #27496d, 0 5px 15px #193047;
+}
+
+#leftPanel {
+    background-color: #a3dad0;
+    position: absolute;
+    height: 90%;
+    top: 10%;
+    left: 0%;
+    width: 15%;
+    overflow: auto;
+}
+
+.leftPanelItem {
+    background-color: #87dad4;
+    border-radius: 30px;
+    margin: 25px auto;
+    height: 5%;
+    width: 75%;
+    font-size: 3vmin;
+    text-align: center;
+    padding-top: 3%;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px #27496d;
+}
+
+.leftPanelItem:hover {
+    background-color: #94f7f1;
+    box-shadow: inset 0 0 0 1px #27496d, 0 5px 15px #193047;
+}
+

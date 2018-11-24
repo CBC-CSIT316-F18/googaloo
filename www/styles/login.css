@@ -1,0 +1,22 @@
+ .container {
+     position: absolute;
+     top: 35%;
+     left: 35%;
+     height: 350px;
+     width: 30%;
+     background-color: #94f7f1;
+ }
+
+ .login-form {
+     position: absolute;
+     left: 15%;
+     width: 70%;
+     top: 17%;
+     height: 83%;
+ }
+
+ h1 {
+     position: absolute;
+     width: auto;
+     left: 38%;
+ }
