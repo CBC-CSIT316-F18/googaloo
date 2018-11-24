@@ -6,7 +6,7 @@
  * Time: 1:11 AM
  */
 
-namespace src\util\database\db_tools;
+namespace src\util\database\GetLesson;
 
 
 class GetLessons

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7e6fc58-eae2-4c3e-a3d7-b9bfe2999706" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/www/src/pages/uploadLesson.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/util/database/GetLessons.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/src/util/io/UploadFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/styles/uploadLesson.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/dataBaseFilesFromBook/db_tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/dataBaseFilesFromBook/db_tools.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/leftPanel/leftPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/leftPanel/leftPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/srcIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/srcIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/util/database/db_tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/util/database/db_tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/util/database/GetLessons.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/util/database/GetLessons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/src/util/io/UploadFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/util/io/UploadFile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +43,7 @@
         <counts>
           <entry key="css" value="626" />
           <entry key="dummy" value="2" />
-          <entry key="php" value="6750" />
+          <entry key="php" value="6791" />
           <entry key="txt" value="25" />
         </counts>
       </usages-collector>
@@ -60,7 +51,7 @@
         <counts>
           <entry key="CSS" value="626" />
           <entry key="HTML" value="20" />
-          <entry key="PHP" value="6730" />
+          <entry key="PHP" value="6771" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -91,20 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="1573" column="32" selection-start-line="1573" selection-start-column="15" selection-end-line="1573" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/src/util/io/UploadFile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+              <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
               <folding>
                 <element signature="e#6#99#0#PHP" expanded="true" />
                 <element signature="e#135#175#0#PHP" expanded="true" />
@@ -122,9 +104,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/util/database/GetLessons.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -220,6 +206,7 @@
         <option value="$PROJECT_DIR$/www/src/srcIndex.php" />
         <option value="$PROJECT_DIR$/www/src/util/database/db_tools.php" />
         <option value="$PROJECT_DIR$/www/src/pages/uploadLesson.php" />
+        <option value="$PROJECT_DIR$/www/src/util/database/GetLessons.php" />
         <option value="$PROJECT_DIR$/www/src/util/io/UploadFile.php" />
       </list>
     </option>
@@ -376,12 +363,12 @@
       <workItem from="1539571813972" duration="2929000" />
       <workItem from="1539657112713" duration="19000" />
       <workItem from="1540170891476" duration="600000" />
-      <workItem from="1543042464172" duration="8222000" />
+      <workItem from="1543042464172" duration="8632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48923000" />
+    <option name="totallyTimeSpent" value="49333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -709,17 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/util/io/UploadFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#6#99#0#PHP" expanded="true" />
-            <element signature="e#135#175#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/rightPanel/rightPanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -728,7 +704,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/util/database/GetLessons.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/util/io/UploadFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+          <folding>
+            <element signature="e#6#99#0#PHP" expanded="true" />
+            <element signature="e#135#175#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

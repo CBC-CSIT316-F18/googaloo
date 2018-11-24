@@ -32,13 +32,12 @@ class UploadFile
         $this->dbTools = new db_tools();
         $dbc = $this->dbTools->db_connect();
 
-        $fileNameNew = $_SESSION['userID'] . "_". str_replace(".", "", microtime(true)) . ".data";
-
-
-
         $fileName = $this->dbTools->escapeStringForDBUse($_FILES[$fileIdnetifier]["name"]);
+        $fileNameNew = $_SESSION['userID'] . "_" . md5($fileName) .  "_" . str_replace(".", "", microtime(true)) . ".data";
+        $filepath = DATA_FOLDER . $fileNameNew;
         $titleSafe = $this->dbTools->escapeStringForDBUse($title);
         $descriptionSafe = $this->dbTools->escapeStringForDBUse($description);
+
 
         /** @var boolean $result */
         $result = move_uploaded_file($_FILES[$fileIdnetifier]["tmp_name"], DATA_FOLDER . $fileNameNew) > 0 ? true : false;
