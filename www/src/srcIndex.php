@@ -17,6 +17,9 @@ include "util/database/register.php";
 include "util/authentication/Login.php";
 include "util/authentication/Logout.php";
 include "util/io/UploadFile.php";
+include "util/DTOs/LessonDTO.php";
+include "util/database/GetLessons.php";
+include "util/io/DownloadFile.php";
 
 /*  functions  */
 include "menuBar/menuBar.php";
