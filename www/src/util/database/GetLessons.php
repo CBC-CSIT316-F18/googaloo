@@ -35,6 +35,7 @@ class GetLessons
 
         $rows = mysqli_query($dbc, $q);
 
+        /*  create an array of the Lesson DTOs made from the rows in the result  */
         /** @var LessonDTO[] $lessonsDTOs */
         $lessonsDTOs = [];
         foreach ($rows as $row) {

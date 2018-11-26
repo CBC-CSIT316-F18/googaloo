@@ -10,6 +10,13 @@ namespace src\util\DTOs\LessonDTO;
 
 use mysqli_result;
 
+/**
+ * Class LessonDTO
+ *
+ * Stores uploaded lessons in a format that can be easily accessed and passed around.
+ *
+ * @package src\util\DTOs\LessonDTO
+ */
 class LessonDTO
 {
 

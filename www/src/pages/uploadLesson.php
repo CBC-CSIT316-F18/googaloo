@@ -6,6 +6,11 @@
  * Time: 11:56 PM
  */
 
+/**
+ *
+ * php.ini needs to be updated with post max size and file max size in order to upload files larger than a mb or two.
+ *
+ */
 
 define("DIR_ROOT",preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']) . "/googaloo/www/");
 
@@ -57,7 +62,7 @@ if (!empty($_POST['description'])) {
     $goodToGo &= false;
 }
 
-if (isset($_FILES['lesson'])) {
+if (isset($_FILES[$fileIdnetifier])) {
     $goodToGo &= true;
 } else {
     $goodToGo &= false;
@@ -65,6 +70,12 @@ if (isset($_FILES['lesson'])) {
 
 if($goodToGo){
     new UploadFile($fileIdnetifier, $_POST['name'], $_POST['description']);
+    $href = HREF_ROOT;
+    print(<<<SUCCEEDED
+<h2>Lesson Uploaded</h2>
+<div><p><a href='${href}src/pages/uploadLesson.php' >Upload another?</a></p></div>
+SUCCEEDED
+    );
 } else {
 
     $placeHolder = "Input Valid Value";
