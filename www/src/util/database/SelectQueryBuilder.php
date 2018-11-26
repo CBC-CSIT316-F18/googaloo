@@ -19,6 +19,8 @@ class SelectQueryBuilder
     private $where = null;
     /** @var string $groupby */
     private $groupBy = null;
+    /** @var string $orderBy */
+    private $orderBy = null;
 
 
     /**
@@ -71,6 +73,16 @@ class SelectQueryBuilder
     }
 
     /**
+     * @param string $orderBy
+     * @return SelectQueryBuilder
+     */
+    public function withOrderBy($orderBy)
+    {
+        $this->orderBy = $orderBy;
+        return $this;
+    }
+
+    /**
      * @return string
      * @throws \Exception
      */
@@ -90,8 +102,13 @@ class SelectQueryBuilder
         }
 
         if(!is_null($this->groupBy)){
-            $query .= " groupby {$this->groupBy}";
+            $query .= " group by {$this->groupBy}";
         }
+
+        if(!is_null($this->orderBy)){
+            $query .= " order by {$this->orderBy}";
+        }
+
         return $query;
     }
 }

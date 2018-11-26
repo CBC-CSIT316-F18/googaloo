@@ -2,8 +2,11 @@
 namespace src\util\database\db_tools;
 
 
+use mysqli;
+
 class db_tools
 {
+    /** @var mysqli $connection */
     public $connection=null;
     public $rows=null;
     public $username="root";
@@ -84,12 +87,23 @@ class db_tools
         return "'" . mysqli_real_escape_string($this->connection,$value) . "'";
     }
 
-    function escape_data ($data) {
+    public function escape_data ($data) {
 
         // Strip the slashes if Magic Quotes is on:
         if (get_magic_quotes_gpc()) $data = stripslashes($data);
         // Apply trim() and mysqli_real_escape_string():
         return mysqli_real_escape_string ($this->connection, trim ($data));
     } // End of the escape_data() function.
+
+
+    /**
+     * Uses mysqi interface to safely use strings.
+     * @param String $string String to make safe
+     * @return String
+     */
+    function escapeStringForDBUse($string)
+    {
+        return $this->connection->real_escape_string($string);
+    }
 }
 

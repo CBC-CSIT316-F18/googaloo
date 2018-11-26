@@ -23,6 +23,11 @@ function printLeftPanel()
 
     ElementBuilder::create("div")
         ->withAttribute("class", "leftPanelItem")
+        ->withTextContent("<a href='" . HREF_ROOT . "src/pages/uploadLesson.php'>Upload Lessons</a>")
+        ->buildCompleteTagWithTextContent();
+
+    ElementBuilder::create("div")
+        ->withAttribute("class", "leftPanelItem")
         ->withTextContent("All Lessons")
         ->buildCompleteTagWithTextContent();
 

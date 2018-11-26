@@ -1,6 +1,8 @@
 <?php
 
 use src\util\html\ElementBuilder\ElementBuilder;
+use src\util\DTOs\LessonDTO\LessonDTO;
+use src\util\database\GetLessons\GetLessons;
 
 function printRightPanel()
 {
@@ -9,12 +11,21 @@ function printRightPanel()
         ->withAttribute("id", "rightPanel")
         ->buildLeaveTagOpen();
 
-    /*  No need to save this to a variable as it is only used here once.  */
 
-    for ($i = 1; $i < 16; $i++) {
+
+    $lessons = GetLessons::getLessons();
+    $downloadHref = HREF_ROOT . "src/pages/download.php?id=";
+
+    /** @var LessonDTO $lesson */
+    foreach ($lessons as $lesson) {
+        $id = $lesson->getId();
         ElementBuilder::create("div")
             ->withAttribute("class", "rightPanelItem")
-            ->withTextContent("Latest Lesson ($i)")
+            /*  Set the click event so that the div will trigger the click of its link  */
+            ->withAttribute("onClick", 'document.querySelector(".rightPanelItem a.rightPanelLink' . $id . '").click();')
+            ->withAttribute("title", $lesson->getFiledescription())
+            /*  add a link to the lesson's download  */
+            ->withTextContent("<a class='rightPanelLink$id' href='${downloadHref}${id}'>" . $lesson->getTitle() . "</a>")
             ->buildCompleteTagWithTextContent();
     }
 

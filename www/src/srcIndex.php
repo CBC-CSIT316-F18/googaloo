@@ -1,5 +1,7 @@
 <?php
 define("HREF_ROOT", "/googaloo/www/");
+define("DATA_FOLDER", "C:/wamp64/data/");
+
 /*  Start session if session has not already been started  */
 if (!isset($_SESSION)) {
     session_start();
@@ -14,6 +16,10 @@ include "util/html/ElementBuilder.php";
 include "util/database/register.php";
 include "util/authentication/Login.php";
 include "util/authentication/Logout.php";
+include "util/io/UploadFile.php";
+include "util/DTOs/LessonDTO.php";
+include "util/database/GetLessons.php";
+include "util/io/DownloadFile.php";
 
 /*  functions  */
 include "menuBar/menuBar.php";
