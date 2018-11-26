@@ -20,8 +20,9 @@ function printRightPanel()
         $id = $lesson->getId();
         ElementBuilder::create("div")
             ->withAttribute("class", "rightPanelItem")
+            ->withAttribute("onClick", 'document.querySelector(".rightPanelItem a.rightPanelLink' . $id . '").click();')
             ->withAttribute("title", $lesson->getFiledescription())
-            ->withTextContent("<a href='${downloadHref}${id}'>" . $lesson->getTitle() . "</a>")
+            ->withTextContent("<a class='rightPanelLink$id' href='${downloadHref}${id}'>" . $lesson->getTitle() . "</a>")
             ->buildCompleteTagWithTextContent();
     }
 

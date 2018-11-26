@@ -124,6 +124,9 @@ a:active {
 }
 
 .rightPanelItem {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     background-color: #b5868e;
     border-radius: 15px;
     margin: 10px auto;
@@ -157,11 +160,15 @@ a:active {
     margin: 25px auto;
     height: 5%;
     width: 75%;
-    font-size: 3vmin;
+    font-size: 1.5em;
     text-align: center;
     padding-top: 3%;
     cursor: pointer;
     box-shadow: inset 0 0 0 1px #27496d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .leftPanelItem:hover {
